@@ -1,0 +1,95 @@
+<html>
+<head>
+	<title>Math Quiz</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+
+
+<style>
+    body
+{
+	background-size: cover;
+    color: blueviolet; 
+    background-image: URL("https://www.lockheedmartin.com/content/dam/lockheed-martin/eo/photo/webt/webt-woman-in-math-lead.jpg.pc-adaptive.full.medium.jpeg");
+}
+
+	.login_div1 , .login_div2
+	{
+		padding: 10px;
+		float: none;
+		border-radius: 15px;
+	}
+
+
+#player1_name , #player2_name
+{
+	display: inline-block;
+	margin-left: 20px;
+}
+#word
+{
+	width: 60%;
+}
+#word_display
+{
+	letter-spacing: 5px;
+}
+#output
+{
+border-radius: 10px;
+border-top: 10px solid #AA4465;
+padding: 10px;
+float: none;
+text-align: left;
+}
+</style>
+</head>
+<body>
+    
+    <center>
+        <div class="btn-info">
+        <h1>Math Quiz</h1>
+        </div>
+        <div class="col-lg-4 col-sm-8 col-xs-11 login_div1">
+            <div class="btn btn-success">
+            <h3>Player 1 Login</h3>
+            <label>User Name</label>
+            <input type="text" id="player1_name_input" class="form-control" placeholder="Player 1 Name">
+        </div>
+            <br>
+        
+        </div>
+        <br>
+        
+        <div class="col-lg-4 col-sm-8 col-xs-11 login_div2">
+            <div class="btn btn-success">
+            <h3>Player 2 Login</h3>
+            <label>User Name</label>
+            <input type="text" id="player2_name_input" class="form-control" placeholder="Player 2 Name">
+        </div>
+            <br>
+        </div>
+    
+        <br>
+        <button style="width:30%" class="btn btn-warning" onclick="addUser();">Login</button>
+      
+</center>
+<script>
+     function addUser()
+        {
+            player1name = document.getElementById("player1_name_input").value;
+            player2name = document.getElementById("player2_name_input").value;
+
+            localStorage.setItem("Player 1 name:", player1name);
+            localStorage.setItem("Player 2 name:", player2name);
+
+            window.location = "game_page.html";
+        }
+</script>
+</body>
+</html>
